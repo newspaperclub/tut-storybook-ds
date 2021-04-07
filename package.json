@@ -23,6 +23,10 @@
     "build-storybook-docs": "build-storybook -s public --docs",
     "release": "auto shipit --base-branch=main"
   },
+  "plugins": [
+    "npm",
+    ["conventional-commits", { "defaultReleaseType": "patch" }]
+  ],
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -52,6 +56,7 @@
     ]
   },
   "devDependencies": {
+    "@auto-it/conventional-commits": "^10.24.1",
     "@babel/cli": "^7.13.14",
     "@storybook/addon-a11y": "^6.2.5",
     "@storybook/addon-actions": "^6.2.5",

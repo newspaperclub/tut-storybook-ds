@@ -34,7 +34,7 @@ const SIZES = {
 
 const StyledButton = styled.button`
   border: 0;
-  border-radius: 3em;
+  border-radius: 0;
   cursor: pointer;
   display: inline-block;
   overflow: hidden;
@@ -42,6 +42,7 @@ const StyledButton = styled.button`
   position: relative;
   text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
   transition: all 150ms ease-out;
   transform: translate3d(0,0,0);
   vertical-align: top;
@@ -59,15 +60,6 @@ const StyledButton = styled.button`
   ${props =>
     !props.isLoading &&
     `
-      &:hover {
-        transform: translate3d(0, -2px, 0);
-        box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px 0;
-      }
-
-      &:active {
-        transform: translate3d(0, 0, 0);
-      }
-
       &:focus {
         box-shadow: ${rgba(color.primary, 0.4)} 0 1px 9px 2px;
       }
@@ -124,21 +116,6 @@ const StyledButton = styled.button`
     `
       cursor: progress !important;
       opacity: 0.7;
-
-      ${Loading} {
-        transition: transform 700ms ${easing.rubber};
-        transform: translate3d(0, -50%, 0);
-        opacity: 1;
-      }
-
-      ${Text} {
-        transform: scale3d(0, 0, 1) translate3d(0, -100%, 0);
-        opacity: 0;
-      }
-
-      &:hover {
-        transform: none;
-      }
     `}
 
   ${props =>
@@ -178,7 +155,7 @@ const StyledButton = styled.button`
     props.appearance === APPEARANCES.SECONDARY &&
     `
       background: ${color.secondary};
-      color: ${color.lightest};
+      color: ${color.darkest};
 
       ${!props.isLoading &&
         `
