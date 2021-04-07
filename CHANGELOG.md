@@ -1,3 +1,15 @@
+# v0.1.2 (Wed Apr 07 2021)
+
+#### 🐛 Bug Fix
+
+- Add conventional commits [#3](https://github.com/newspaperclub/tut-storybook-ds/pull/3) ([@npc-vicki](https://github.com/npc-vicki))
+
+#### Authors: 1
+
+- Vicki Cole ([@npc-vicki](https://github.com/npc-vicki))
+
+---
+
 # v0.1.1 (Wed Apr 07 2021)
 
 #### 🐛 Bug Fix
